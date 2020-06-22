@@ -9,7 +9,7 @@ export const AddTransaction = () => {
   const {addTransaction} = useContext(GlobalContext)
 
   const onSubmit = e => {
-    if (amount === 0 || amount === null) {
+    if (amount == 0 || amount == null) {
       alert("Enter Some Amount");
       
       
