@@ -10,8 +10,9 @@ export const AddTransaction = () => {
 
   const onSubmit = e => {
     if (amount == 0 || amount == null) {
+      e.preventDefault(); 
       alert("Enter Some Amount");
-      
+     
       
     } 
     else {
