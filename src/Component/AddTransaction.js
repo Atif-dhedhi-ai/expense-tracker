@@ -32,15 +32,37 @@ export const AddTransaction = () => {
     setAmount("");
   }
 
-}
+  }
+  
+  
+<datalist id="Description">
+  <option>Volvo</option>
+  <option>Saab</option>
+  <option>Mercedes</option>
+  <option>Audi</option>
+</datalist>
   return (
         <>
             <h3>Add new transaction</h3>
       <form onSubmit={onSubmit}>
-        <div className="form-control">
+
+        <div >
+          <label htmlFor="text">Text</label>
+          <select className="selection" onClick={(e) => setText(e.target.value)} placeholder="Please Select" >
+            <option value="Salary"> Salary </option>
+            <option value="Other Income"> Other Income </option>
+            <option value = "Food"> Food </option>
+
+
+          </select>
+
+          
+
+        </div>
+        {/* <div className="form-control">
           <label htmlFor="text">Text</label>
           <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter text..." />
-        </div>
+        </div> */}
         <div className="form-control">
           <label htmlFor="amount"
             >Amount <br />
